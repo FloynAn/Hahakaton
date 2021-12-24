@@ -1,150 +1,147 @@
-<!DOCTYPE html>
-<html lang="en">
+Алия Makers, [24.12.2021 12:10]
+<!DOCTYPE html> 
+<html lang="en"> 
+ 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+    <!-- Bootstrap css cdn --> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> 
+    <!-- CSS style.css --> 
+    <link rel="stylesheet" href="./css/style.css"> 
+    <!-- Bootstrap js bundle cdn --> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
+        crossorigin="anonymous"></script> 
+</head> 
+ 
+<body> 
+    <!-- NAVBAR --> 
+    <nav class="navbar navbar-warning bg-light"> 
+        <div class="container d-flex"> 
+            <div class="d-flex align-items-center"> 
+                <img class="me-2" width="150px" src="./img/pngegg (1).png" alt=""> 
+            </div> 
+            <input class="form-control me-2 w-50 search-inp" type="search" placeholder="Search student" aria-label="Search"> 
+            <button data-bs-toggle="modal" data-bs-target="#addFormModal" class="btn btn-primary">Add student</button> 
+ 
+        </div> 
+    </nav> 
+    <!-- END OF NAVBAR --> 
+ 
+    <!-- PAGINATION --> 
+    <nav aria-label="Page navigation example"> 
+        <ul class="pagination"> 
+            <li class="page-item prev"><a class="page-link" href="#">Previous</a></li> 
+            <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> --> 
+            <div class="pagination-list d-flex"></div> 
+            <li class="page-item next"><a class="page-link" href="#">Next</a></li> 
+        </ul> 
+    </nav> 
+    <!-- END OF PAGINATION --> 
+ 
+    <!-- MODAL FORM FOR ADDING NEW MOVIE --> 
+    <!-- Modal --> 
+    <div class="modal fade" id="addFormModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"> 
+        <div class="modal-dialog"> 
+            <div class="modal-content"> 
+                <div class="modal-header"> 
+                    <h5 class="modal-title" id="exampleModalLabel">Add a student</h5> 
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> 
+                </div> 
+                <div class="modal-body"> 
+                    <div> 
+                        <label for="studName" class="fs-5 fw-bold">Name</label> 
+                        <input type="text" id="studName" class="text-start input-group-text mb-2 w-100" 
+                            placeholder="name" /> 
+                    </div> 
+                    <div> 
+                        <label for="studLastName" class="fs-5 fw-bold">Lastname</label> 
+                        <input type="text" id="studLastName" class="text-start input-group-text mb-2 w-100" placeholder="lastname" /> 
+                    </div> 
+                    <div> 
+                        <label for="studPhone" class="fs-5 fw-bold">Phone</label> 
+                        <textarea class="input-group-text w-100 text-start" placeholder="phone number" 
+                            id="studPhone" style="height: 60px"></textarea> 
+                    </div> 
+                    <div> 
+                        <label for="studWeekly" class="fs-5 fw-bold">KPI weekly</label> 
+                        <input type="text" id="studWeekly" class="text-start input-group-text mb-4 w-100" 
+                            placeholder="kpi weekly" /> 
+                    </div> 
+                    <div> 
+                        <label for="studMonthly" class="fs-5 fw-bold">KPI monthly</label> 
+                        <input type="text" id="studMonthly" class="text-start input-group-text mb-4 w-100" 
+                            placeholder="kpi monthly" /> 
+                    </div> 
+                </div> 
+                <div class="modal-footer"> 
+                    <button
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Store</title>
-    <!-- Bootstrap css cdn -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <!-- CSS style.css -->
-    <link rel="stylesheet" href="./css/style.css">
-    <!-- Bootstrap js bundle cdn -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
-</head>
-
-<body>
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-warning bg-warning">
-        <div class="container d-flex">
-            <div class="d-flex align-items-center">
-                <img class="me-2" width="30px" src="https://cdn-icons-png.flaticon.com/512/73/73960.png" alt="">
-                <a class="navbar-brand" style="color: #6712FF;">Movie club</a>
-            </div>
-            <input class="form-control me-2 w-50 search-inp" type="search" placeholder="Search" aria-label="Search">
-            <button data-bs-toggle="modal" data-bs-target="#addFormModal" class="btn btn-violet">Add movie</button>
-
-        </div>
-    </nav>
-    <!-- END OF NAVBAR -->
-
-    <!-- PAGINATION -->
-    <nav aria-label="Page navigation example">
-        <ul class="pagination">
-            <li class="page-item prev"><a class="page-link" href="#">Previous</a></li>
-            <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
-            <div class="pagination-list d-flex"></div>
-            <li class="page-item next"><a class="page-link" href="#">Next</a></li>
-        </ul>
-    </nav>
-    <!-- END OF PAGINATION -->
-
-    <!-- MODAL FORM FOR ADDING NEW MOVIE -->
-    <!-- Modal -->
-    <div class="modal fade" id="addFormModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Add a student</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div>
-                        <label for="title" class="fs-5 fw-bold">Firstname</label>
-                        <input type="text" id="title" class="text-start input-group-text mb-2 w-100"
-                            placeholder="title" />
-                    </div>
-                    <div>
-                      <label for="title" class="fs-5 fw-bold">Lastname</label>
-                      <input type="text" id="title" class="text-start input-group-text mb-2 w-100"
-                          placeholder="title" />
-                    </div>
-                    <div>
-                      <label for="title" class="fs-5 fw-bold">Phone</label>
-                      <input type="text" id="title" class="text-start input-group-text mb-2 w-100"
-                          placeholder="title" />
-                    </div>
-
-                    <div>
-                        <label for="img" class="fs-5 fw-bold">Image</label>
-                        <input type="text" id="img" class="text-start input-group-text mb-2 w-100" placeholder="img" />
-                    </div>
-                    <div>
-                        <label for="desc" class="fs-5 fw-bold">Description</label>
-                        <textarea class="input-group-text w-100 text-start" placeholder="Leave a Description here"
-                            id="desc" style="height: 60px"></textarea>
-                    </div>
-                    <div>
-                        <label for="price" class="fs-5 fw-bold">Price</label>
-                        <input type="text" id="price" class="text-start input-group-text mb-4 w-100"
-                            placeholder="price" />
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-violet" id="btn-add">Add movie</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- END MODAL FORM FOR ADDING NEW MOVIE -->
-
-    <div class="container">
-        <div class="row mt-5 justify-content-center list">
-
-        </div>
-    </div>
-
-
-    <!-- EDIT MODAL FORM -->
-    <div class="modal fade" id="editFormModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Edit a movie</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div>
-                        <label for="edit-title" class="fs-5 fw-bold">Title</label>
-                        <input type="text" id="edit-title" class="text-start input-group-text mb-2 w-100"
-                            placeholder="title" />
-                    </div>
-                    <div>
-                        <label for="edit-img" class="fs-5 fw-bold">Image</label>
-                        <input type="text" id="edit-img" class="text-start input-group-text mb-2 w-100"
-                            placeholder="img" />
-                    </div>
-                    <div>
-                        <label for="edit-desc" class="fs-5 fw-bold">Description</label>
-                        <textarea class="input-group-text w-100 text-start" placeholder="Leave a Description here"
-                            id="edit-desc" style="height: 60px"></textarea>
-                    </div>
-                    <div>
-                        <label for="edit-price" class="fs-5 fw-bold">Price</label>
-                        <input type="text" id="edit-price" class="text-start input-group-text mb-4 w-100"
-                            placeholder="price" />
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-violet" id="btn-save-edit">Save a movie</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- END OF EDIT MODAL FORM -->
-
-
-    <!-- jQuery cdn -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <!-- main.js -->
-    <script src="./js/main.js"></script>
-</body>
-
+Алия Makers, [24.12.2021 12:10]
+type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> 
+                    <button type="button" class="btn btn-primary" id="btn-add">Add student</button> 
+                </div> 
+            </div> 
+        </div> 
+    </div> 
+    <!-- END MODAL FORM FOR ADDING NEW MOVIE --> 
+ 
+    <div class="container"> 
+        <div class="row mt-5 justify-content-center list"> 
+ 
+        </div> 
+    </div> 
+ 
+ 
+    <!-- EDIT MODAL FORM --> 
+    <div class="modal fade" id="editFormModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"> 
+        <div class="modal-dialog"> 
+            <div class="modal-content"> 
+                <div class="modal-header"> 
+                    <h5 class="modal-title" id="exampleModalLabel">Edit a movie</h5> 
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> 
+                </div> 
+                <div class="modal-body"> 
+                    <div> 
+                        <label for="edit-title" class="fs-5 fw-bold">Title</label> 
+                        <input type="text" id="edit-title" class="text-start input-group-text mb-2 w-100" 
+                            placeholder="title" /> 
+                    </div> 
+                    <div> 
+                        <label for="edit-img" class="fs-5 fw-bold">Image</label> 
+                        <input type="text" id="edit-img" class="text-start input-group-text mb-2 w-100" 
+                            placeholder="img" /> 
+                    </div> 
+                    <div> 
+                        <label for="edit-desc" class="fs-5 fw-bold">Description</label> 
+                        <textarea class="input-group-text w-100 text-start" placeholder="Leave a Description here" 
+                            id="edit-desc" style="height: 60px"></textarea> 
+                    </div> 
+                    <div> 
+                        <label for="edit-price" class="fs-5 fw-bold">Price</label> 
+                        <input type="text" id="edit-price" class="text-start input-group-text mb-4 w-100" 
+                            placeholder="price" /> 
+                    </div> 
+                </div> 
+                <div class="modal-footer"> 
+                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button> 
+                    <button type="button" class="btn btn-violet" id="btn-save-edit">Save a movie</button> 
+                </div> 
+            </div> 
+        </div> 
+    </div> 
+    <!-- END OF EDIT MODAL FORM --> 
+ 
+ 
+    <!-- jQuery cdn --> 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> 
+    <!-- main.js --> 
+    <script src="./js/main.js"></script> 
+</body> 
+ 
 </html>
