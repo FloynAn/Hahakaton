@@ -1,0 +1,13 @@
+.btn-violet {
+  background-color: #6712ff;
+  color: #fffb12;
+}
+
+.btn-violet:hover {
+  color: #fffb12;
+  background-color: #540bd3;
+}
+
+.movie-img{
+  height: 260px;object-fit: cover;
+}
