@@ -1,13 +1,21 @@
-.btn-violet {
+.btn-primary {
   background-color: #6712ff;
   color: #fffb12;
 }
 
-.btn-violet:hover {
+.btn-primary:hover {
   color: #fffb12;
   background-color: #540bd3;
 }
 
-.movie-img{
-  height: 260px;object-fit: cover;
+span{
+  font-weight: 700;
+}
+.style-stud{
+  font-weight: 700;
+  font-style: italic;
+}
+
+body{
+  background: linear-gradient(to right, rgba(230, 233, 240, 0.5), rgba(238, 241, 245, 0.5))
 }
